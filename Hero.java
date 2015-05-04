@@ -1,6 +1,7 @@
 public class Hero {
 	String name;
 	int hp;
+	static int money;
 
 	void sleep(){
 		this.hp = 100;
@@ -21,8 +22,12 @@ public class Hero {
 		System.out.println("GAMEOVER");
 		System.out.println("最終HPは"+this.hp+"でした");
 	}
-	
-		
+	Hero(String name){
+		this.hp = 100;
+	}	
+	Hero(){
+		this("ダミー");
+	}		
 }
 
 
