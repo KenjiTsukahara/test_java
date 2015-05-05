@@ -1,9 +1,12 @@
 public class Matango{
-	int hp;
-	final int LEVEL = 10;
-	char suffix;
-
-	void run(){
-		System.out.println("おばけキノコ"+this.suffix+"は逃げ出した");
+	int hp = 50;
+	private char suffix;
+	public Matango(char suffix){
+		 this.suffix = suffix;
+	}
+	void attack(Hero h){
+		System.out.println("きのこ"+this.suffix+"の攻撃");
+		System.out.println("10のダメージ");
+		h.setHp(h.getHp() - 10);
 	}
 }
