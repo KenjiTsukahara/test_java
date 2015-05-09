@@ -22,9 +22,21 @@ public class Wizard {
 	}
 
 	public String getName(){return this.name;}
-	public void setName(String name){this.name = name;}
+	public void setName(String name){
+		if(name = null || name.length < 3){
+			throw new IllegalArgumentException("設定されている杖がnullです");
+		}
+
+		this.name = name;
+	}
 	public Wand getWand(){return this.wand;}
-	public void setWand(Wand wand){this.wand = wand;}
+	public void setWand(Wand wand){
+		if(wand == null){
+			throw new InnegalArgumentException("設定されようとしている杖がnullです");
+		}
+	
+		this.wand = wand;
+	}
 
 
 }
