@@ -1,13 +1,19 @@
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 public class Main{
 	public static void main(String[] args){
-		int a = 1;
-		int b = 1;
+			Date now = new Date();
+			Calendar c = Calendar.getInstance();
+			c.setTime(now);
+			int day = c.get(Calendar.DAY_OF_MONTH);
+			day += 100;
+			c.set(Calendar.DAY_OF_MONTH,day);
 
-		if(a == b){
-			System.out.println("true");
-		}else{
-			System.out.println("false");
-		}
+			Date future = c.getTime();
+
+			SimpleDateFormat f = new SimpleDateFormat("西y年MM月dd日");
+			System.out.println(f.format(future));
 		}
 
 }
